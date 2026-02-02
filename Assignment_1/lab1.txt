@@ -1,0 +1,52 @@
+
+CREATE TABLE Student (RollNo INT ,Name VARCHAR(50), Dept VARCHAR(20), Age INT, Phone VARCHAR(15));
+
+CREATE TABLE Course (CourseID INT , CourseName VARCHAR(50),Credits INT);
+
+ALTER TABLE Student ADD City VARCHAR(20);
+
+
+ALTER TABLE Student ADD Semester INT;
+
+
+ALTER TABLE Student RENAME COLUMN Phone TO MobileNo;
+
+
+                                  
+DROP TABLE Course;
+
+
+
+INSERT INTO Student VALUES (101, 'Rahul kumar', 'ME', 20, '9876543567', 'Khagaria', 5);
+
+INSERT INTO Student VALUES (102, 'Aditya kumar', 'AI', 20, '6205997294', 'MADHEPURA', 5);
+
+INSERT INTO Student VALUES (103, 'Rohit kumar', 'IT', 19, '9834543222', 'gaya', 4);
+
+INSERT INTO Student VALUES (104, 'Pankaj kumar', 'ME', 22, '9876543211', 'darbhanga', 6);
+
+INSERT INTO Student VALUES (105, 'Priya kumari', 'CSE', 21, '9876543210', 'begusarai', 5);
+SELECT * FROM Student;
+
+
+SELECT RollNo , Name FROM Student;
+
+                                                                                                             
+SELECT * FROM Student WHERE Dept='CSE';
+
+                                                                           
+SELECT * FROM Student WHERE Age > 20 ;
+
+                              
+UPDATE Student SET Dept = 'AIML' WHERE RollNo = 101;
+
+
+UPDATE Student SET City = 'patna' WHERE Name = 'Rahul kumar';
+
+
+UPDATE Student SET Age=Age+1;
+
+
+DELETE FROM Student WHERE RollNo = 105;
+
+DELETE FROM Student;
